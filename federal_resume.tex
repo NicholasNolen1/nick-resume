@@ -1,0 +1,219 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\input{glyphtounicode}
+
+% Set clean, balanced margins for 2-page federal standard
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.55in}
+\addtolength{\textheight}{1.1in}
+\setlength{\footskip}{14pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Header and Footer for Federal Application
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\lfoot{\small \color{darkgray} Nicholas J. Nolen $|$ Federal Resume (GS-1550-12) $|$ Announcement: LaRC-26-DE-13053025-BP}
+\rfoot{\small \color{darkgray} Page \thepage\ of \pageref{LastPage}}
+
+% Section heading styling
+\titleformat{\section}{
+  \vspace{4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+\pdfgentounicode=1
+
+% Custom formatting commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubheadingFederal}[6]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \small{#5} & \small{#6} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{2pt}\item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+%----------FEDERAL HEADER----------
+\begin{center}
+    {\textbf{\Huge \scshape Nicholas J. Nolen}} \\ \vspace{2pt}
+    \small Waco, TX $|$ Nicholas\_Nolen1@baylor.edu $|$ linkedin.com/in/nicholasnolen1/ $|$ github.com/nicholasnolen1 \\ \vspace{2pt}
+    \textbf{Citizenship:} United States Citizen $|$ \textbf{Veterans Preference:} None (0-Point) $|$ \textbf{Target Grade:} GS-1550-12 \\
+    \textbf{Position Title:} Public Notice, Research Computer Scientist (Direct Hire) \\
+    \textbf{Announcement Number:} LaRC-26-DE-13053025-BP $|$ \textbf{USAJOBS Control Number:} 883318500
+\end{center}
+
+\vspace{-4pt}
+
+%-----------EDUCATION & BASIC REQUIREMENTS-----------
+\section{Education \& GS-1550 Basic Qualifications}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Baylor University}{Waco, TX}
+    {Master of Science in Computer Science (Focus: Deep Learning and Network Systems)}{Expected Graduation: May 2027}
+    \resumeItemListStart
+      \resumeItem{\textbf{Graduate Level Coursework:} Machine Learning, Data Communications, Operating Systems, Advanced Database Design.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Baylor University}{Waco, TX}
+    {Bachelor of Science in Computer Science, GPA: 3.86 / 4.00 (Magna Cum Laude)}{Conferred: May 2026}
+    \resumeItemListStart
+      \resumeItem{\textbf{Honors \& Awards:} Magna Cum Laude, Dean's List (7 semesters), Full Tuition Faculty Scholarship.}
+      \resumeItem{\textbf{GS-1550 Math \& CS Requirement (30+ Semester Hours Completed):}}
+      \begin{itemize}[leftmargin=0.15in]
+        \item \emph{Mathematics \& Statistics (15+ Credits):} Calculus I (Differential Calculus), Calculus II (Integral Calculus), Linear Algebra, Probability \& Statistics, Discrete Mathematics.
+        \item \emph{Computer Science Core (30+ Credits):} Data Structures \& Algorithmic Analysis, Systems Programming, Operating Systems, Foundations of Computing, Database Design, Cybersecurity, Software Capstone, Technical Writing.
+      \end{itemize}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Peer-Reviewed Publications}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{UI-LIC: A Unified Framework for Evaluating Learned Image Compression Models}}{2026}
+    \resumeItemListStart
+      \resumeItem{\textbf{Authors:} \textbf{Nicholas J. Nolen}, Luc Trudeau, and Andrew C. Freeman.}
+      \resumeItem{\textbf{Venue \& Status:} Accepted for publication in \emph{ACM Multimedia (ACM MM) 2026} (in final picture-ready review).}
+      \resumeItem{\textbf{Preprint \& Code:} arXiv:2606.23545 [cs.MM] $|$ Open-source code: \url{github.com/BaylorMultimediaLab/UI-LIC} (MIT License).}
+      \resumeItem{Built an open-source evaluation framework in Python and PyTorch unifying six learned image compression architectures with HEVC and VVC intra-frame codecs.}
+      \resumeItem{Developed an automated controller that generates Conda environments from model dependency files and manages batch inference jobs through shared JSON configuration schemas.}
+      \resumeItem{Implemented an interactive desktop GUI in PyQt with residual error heatmap overlays to calculate PSNR, SSIM, VMAF, and LPIPS quality metrics.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience (GS-11 Equivalent)}
+\resumeSubHeadingListStart
+
+  \resumeSubheadingFederal
+    {Baylor University Multimedia Research Laboratory}{Waco, TX}
+    {Graduate Research Assistant / Lead Developer}{January 2026 to Present}
+    {Hours: 20 hrs/week (Graduate Research Appointment)}{Supervisors: Dr. L. Trudeau / Dr. A. Freeman (May contact)}
+    \resumeItemListStart
+      \resumeItem{Designed the core software architecture for UI-LIC, an open-source evaluation platform resolving environment conflicts across disparate neural image compression models.}
+      \resumeItem{Wrote an experiment controller in Python that dynamically configures Conda environments, reads task configurations, and runs multi-model inference pipelines.}
+      \resumeItem{Built automated evaluation pipelines across benchmark image datasets (Kodak, CLIC, Tecnick), standardizing rate-distortion curves and metric logs.}
+      \resumeItem{Developed an interactive visualization tool with heatmap overlays to inspect localized reconstruction errors and compression artifacts.}
+      \resumeItem{Authored the primary research paper and technical documentation, leading to first-author acceptance at ACM Multimedia 2026.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\newpage
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience (GS-11 Equivalent)}
+\resumeSubHeadingListStart
+
+  \resumeSubheadingFederal
+    {Vanta ESports}{Remote}
+    {AI Product Engineering Intern}{May 2025 to August 2025}
+    {Hours: 40 hrs/week (Full-Time Internship)}{Supervisor: Product Engineering Leadership (May contact)}
+    \resumeItemListStart
+      \resumeItem{Built a low-latency telemetry tracking pipeline in \textbf{Rust} to process high-frequency in-game coordinate data with sub-millisecond execution times.}
+      \resumeItem{Trained a custom \textbf{YOLOv8} object detection model on gameplay video to extract real-time entity coordinates for tactical analysis.}
+      \resumeItem{Connected the Anthropic Claude API to the telemetry stream to generate post-match coaching feedback and gameplay insights.}
+      \resumeItem{Deployed backend services on \textbf{Azure} and compiled core Rust tracking modules to \textbf{WebAssembly (WASM)} for browser execution via \textbf{Vercel}.}
+      \resumeItem{Presented system architecture and benchmarks to the CEO and Board of Directors, leading to the project being featured for a \$1.5M funding proposal.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL PROJECTS-----------
+\section{Technical Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{CNN Sputum Smear Tuberculosis Diagnostics Pipeline} $|$ \emph{Python, Keras, TensorFlow}}{January 2026 to May 2026}
+    \resumeItemListStart
+      \resumeItem{Trained a 5-layer Convolutional Neural Network with batch normalization and data augmentation to classify tuberculosis bacilli from Ziehl-Neelsen stained sputum smears.}
+      \resumeItem{Reached a \textbf{0.9198 validation accuracy} and \textbf{0.2097 binary cross-entropy loss} across clinical microscopy slide datasets (ODS3 and TBDB).}
+      \resumeItem{Built an automated preprocessing script extracting normalized $224 \times 224$ pixel crops, and developed an interactive Crop Likelihood Viewer to help technicians spot high-probability fields faster.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Bear Radio: Media Over QUIC (MoQ) Streaming Service} $|$ \emph{Rust, MoQ, Ratatui, GCP, Opus}}{January 2025 to May 2025}
+    \resumeItemListStart
+      \resumeItem{Built a terminal-based audio streaming service in \textbf{Rust} using the Media over QUIC (MoQ) protocol for synchronized playback across distributed devices.}
+      \resumeItem{Designed an asynchronous pub/sub pipeline with \textbf{Opus} audio compression and a \textbf{Ratatui} terminal UI, deploying instances on \textbf{GCP} to test packet pacing and playback under simulated jitter.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{MarketOS (Farmers Market Capstone)} $|$ \emph{Next.js, Spring Boot, PostgreSQL}}{January 2026 to May 2026}
+    \resumeItemListStart
+      \resumeItem{Built a full-stack vendor management web app for local market managers, replacing paper logs with relational database storage.}
+      \resumeItem{Wrote custom financial calculation logic for vendor revenue splits and dynamic spreadsheet generation for grant auditing.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages:}{ Python, Rust, C, C++, Java, SQL (PostgreSQL, MariaDB), Bash, WebAssembly (WASM)} \\
+    \textbf{Machine Learning \& Data:}{ PyTorch, TensorFlow, Keras, YOLOv8, OpenCV, NumPy, SciPy, PyAV, Scikit-learn} \\
+    \textbf{Systems, Cloud \& Tools:}{ Linux, Azure, Google Cloud Platform (GCP), Docker, Conda, Git, REST APIs, LaTeX} \\
+    \textbf{Competencies:}{ Neural image compression, computer vision, rate-distortion evaluation, network transport protocols}
+  }}
+\end{itemize}
+
+%-----------LEADERSHIP & CAMPUS INVOLVEMENT-----------
+\section{Leadership \& Campus Involvement}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Baylor University Chamber of Commerce}{Waco, TX}
+    {Secretary, Webmaster, and Bear Committee Member}{August 2023 to December 2025}
+    \resumeItemListStart
+      \resumeItem{Maintained organization web pages using Drupal and handled operational budgets for student events.}
+      \resumeItem{Served on the Bear Committee, feeding and caring for the university's live American black bear mascots in an on-campus habitat meeting USDA animal welfare standards.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}

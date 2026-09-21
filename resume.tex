@@ -1,0 +1,191 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Nicholas Nolen} \\ \vspace{1pt}
+    \small Nicholas\_Nolen1@baylor.edu $|$ 
+    linkedin.com/in/nicholasnolen1/ $|$
+    github.com/nicholasnolen1
+\end{center}
+
+%-----------TECHNICAL SUMMARY-----------
+\section{Technical Summary}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Master of Science in Computer Science student specializing in deep learning and neural data compression, graduating May 2027. \\ \vspace{2pt}
+     \textbf{Languages}{: Java, C, C++, Rust, Python, SQL, Bash} \\
+     \textbf{Operating Systems}{: macOS, Windows, Linux} \\
+     \textbf{Frameworks}{: PyTorch, TensorFlow, Keras, React, Next.js, Spring Boot, Flask, SQLAlchemy} \\ 
+     \textbf{Cloud}{: GCP, Azure, Vercel} \\ 
+     \textbf{Software}{: IntelliJ, VSCode, Pycharm, Vim, Figma, Git, Docker}
+    }}
+ \end{itemize}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Baylor University}{Waco, TX}
+      {Master of Science in Computer Science}{May 2027}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Artificial Intelligence, Machine Learning, Multimedia Systems, Data Communications, Operating Systems, Advanced Database Design}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Baylor University}{Waco, TX}
+      {Bachelor of Science in Computer Science, GPA: 3.86 (Magna Cum Laude)}{May 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Calculus II, Linear Algebra, Probability and Statistics, Discrete Structures, Systems Programming, Data Structures, Algorithms, Database Design, Cybersecurity, Technical Writing}
+        % \resumeItem{\textbf{Honors/Awards:} Magna Cum Laude, Dean's List (7 Semesters), Full Tuition Faculty Scholarship.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{UI-LIC: A Unified Framework for Evaluating Learned Image Compression Models}}{2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Nicholas J. Nolen}, Luc Trudeau, Andrew C. Freeman. \emph{ACM Multimedia (ACM MM) 2026} -- \textbf{Accepted} (in final stage of picture-ready review).}
+        \resumeItem{Engineered an open-source framework integrating six high-performance Learned Image Compression (LIC) models with a centralized controller for unified training, inference, and analysis alongside traditional video codecs.}
+        \resumeItem{Developed a GUI and interactive image analyzer with configurable quality heatmap overlays to equalize bitrates and compute quality metrics (PSNR, SSIM, VMAF, LPIPS).}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Modernization Developer}{July 2026 -- Present (20 hrs/week)}
+      {Baylor University}{Waco, TX}
+      \resumeItemListStart
+        \resumeItem{Upgraded web platform from \textbf{Python 2.7} to \textbf{Python 3.12} and \textbf{Django 4.2 LTS}, fixing broken syntax and updating database dependencies.}
+        \resumeItem{Refactored legacy database models into modular packages to improve code organization and maintainability.}
+        \resumeItem{Containerized the application with \textbf{Docker} and set up \textbf{GitLab CI/CD} pipelines for automated testing.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {AI Product Engineering Intern}{May 2025 -- August 2025 (40 hrs/week)}
+      {Vanta ESports}{Remote}
+      \resumeItemListStart
+        \resumeItem{Designed AI coaching pipeline using \textbf{Rust} for telemetry object tracking, leveraged \textbf{Claude} for semantic gameplay analysis, and hosted on \textbf{Azure} cloud services; transitioned to \textbf{Web Assembly} for in-browser execution via \textbf{Vercel}.}
+        \resumeItem{Presented solution to CEO and board, resulting in project being showcased for \$1.5M funding opportunity.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\newpage
+
+%-----------PROJECTS-----------
+\section{Technical Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{CNN Tuberculosis Diagnosis Predictor} $|$ \emph{Python, Keras, TensorFlow, CNN}}{January 2026 -- May 2026}
+          \resumeItemListStart
+            \resumeItem{Engineered an automated preprocessing pipeline to extract $224 \times 224$ pixel crops centered on labeled regions of sputum smear slides across multiple inconsistent datasets.}
+            \resumeItem{Architected a 5-layer CNN utilizing batch normalization and data augmentation to achieve a 0.9198 validation accuracy across varying slide qualities and staining conditions.}
+            \resumeItem{Developed a "Crop Likelihood Viewer" to prioritize and visually aggregate high-probability viewfields, significantly reducing the manual search time for medical practitioners.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{MarketOS (Farmers Market Capstone)} $|$ \emph{Next.js, Spring Boot, SQL}}{January 2026 -- May 2026}
+          \resumeItemListStart
+            \resumeItem{Collaborated directly with client to define technical scope and requirements for a full-stack vendor management application, optimizing high-density transaction logging and addressing reporting inefficiencies.}
+            \resumeItem{Developed a dynamic Excel template generation system and custom financial logic for vendor sales percentages, implementing an extensible labeling system to facilitate granular grant-tracking and auditing.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Bear Radio: Media Over QUIC Streaming Service} $|$ \emph{Rust, QUIC, GCP, Opus}}{January 2025 -- May 2025}
+          \resumeItemListStart
+            \resumeItem{Engineered a terminal-based concurrent audio streaming service using \textbf{Media over QUIC (MoQ)} to enable low-latency, synchronized playback across multiple distributed devices.}
+            \resumeItem{Developed publisher/subscriber architecture with \textbf{Opus} encoding and an interactive terminal UI, deploying the service via \textbf{GCP} to explore high-concurrency scaling and real-time data synchronization.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------ORGANIZATIONS-----------
+\section{Extracurricular Organizations}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {Baylor Chamber of Commerce}{August 2023 -- December 2025}
+        {Secretary, Webmaster, Welcome Hour Coordinator, and Bear Committee Member}{}
+        \resumeItemListStart
+          \resumeItem{Managed organization website using Drupal; supervised vendor relationships and budget for Welcome Hour.}
+          \resumeItem{Cared for and helped feed the university's live black bear mascots within their on-campus habitat as a Bear Committee Member.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
