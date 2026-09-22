@@ -1,0 +1,64 @@
+name: Build and Release Resume
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'resume.tex'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+
+      # 1. Compile the LaTeX file to PDF
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex 
+          # Outputs resume.pdf
+
+      # 2. Install Pandoc for Markdown conversion
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      # 3. Convert LaTeX to Markdown and prepend the download link
+      - name: Generate README.md with Release Link
+        run: |
+          # Convert LaTeX to MD
+          pandoc resume.tex -f latex -t markdown -o README.md
+          
+          # Construct the persistent "latest release" URL
+          DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/latest/download/resume.pdf"
+          
+          # Prepend the download link to the top of the README
+          echo "[**Download the latest PDF version here**](${DOWNLOAD_URL})" > temp.md
+          echo -e "\n---\n" >> temp.md
+          cat README.md >> temp.md
+          mv temp.md README.md
+
+      # 4. Commit the new README back to the repository
+      - name: Commit auto-generated README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: auto-update README.md and PDF link"
+          file_pattern: README.md
+          skip_dirty_check: false
+
+      # 5. Create GitHub Release and attach the PDF
+      - name: Create Release and Upload PDF
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "v${{ github.run_number }}"
+          name: "Resume Update (Build ${{ github.run_number }})"
+          files: resume.pdf
+          body: "Automated resume compilation."
+          make_latest: true # Ensures the "latest" URL redirects here
